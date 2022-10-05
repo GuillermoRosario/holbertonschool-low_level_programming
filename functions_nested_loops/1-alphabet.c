@@ -1,15 +1,19 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
-        char alpha;
+	int alpha;
 
-for (alpha = 'a'; alpha <= 'z'; alpha++)
-putchar(alpha);
-putchar('\n');
-return (0);
+	alpha = 'a';
+
+	while (alpha <= 'z')
+	{
+		_putchar(alpha);
+		alpha++;
+	}
+	_putchar('\n');
 }
