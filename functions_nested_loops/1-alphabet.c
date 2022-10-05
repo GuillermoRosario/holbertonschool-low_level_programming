@@ -1,15 +1,17 @@
 #include "main.h"
+
 /**
- * print_alphabet - Print _putchar
- * Return: Always 0 (Success)
- */
+  * print_alphabet - Make the alphabet
+  *
+  * Return: void
+  */
 void print_alphabet(void)
 {
-	int ii;
+	char c;
 
-	for (ii = 'a'; ii <= 'z'; ii++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		_putchar(ii);
+		_putchar(c);
 	}
 
 	_putchar('\n');
