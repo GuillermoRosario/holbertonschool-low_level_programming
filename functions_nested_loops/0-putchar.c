@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Nested Loops
+ * main - Entry Point
+ *
+ * Description: 'Print putchar'
  *
  * Return : Always 0 (Success)
  *
