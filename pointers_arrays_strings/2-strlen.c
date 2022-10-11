@@ -12,7 +12,7 @@
  * Return: Always 0 The length of @str.
  */
 
- size_t strlen(const char *s);
+ size_t strlen(const char *s)
 
 {	
 	size_t length = 0;
