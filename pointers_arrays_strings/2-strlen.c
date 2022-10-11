@@ -19,7 +19,7 @@
 	size_t length = 0;
 
 	while (*s++)
-		length++;
+		(length++);
 
 	return (length);
 	}
