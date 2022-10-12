@@ -5,17 +5,14 @@
  * @str: The string to be printed.
  */
 
-	void _puts(char *str);
+void _puts(char *str)
 {
-	int str;
-	int le;
+	int le = 0;
 
 	for(str = 0; str[le] != '\0'; le++)
-	putchar(str[le]);
+		_putchar(str[le]);
 
-	putchar('\n');
-
-	return 0;
+	_putchar('\n');
 }
 
 
