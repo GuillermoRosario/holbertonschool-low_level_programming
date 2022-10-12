@@ -34,8 +34,8 @@ void print_rev(char *s)
 
 	for (reverse = len - 1; reverse >= 0 ; reverse--)
 	{
-		putchar(s[reverse]);
+		_putchar(s[reverse]);
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
