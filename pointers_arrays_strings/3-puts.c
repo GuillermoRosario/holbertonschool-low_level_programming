@@ -5,7 +5,7 @@
  * @str: The string to be printed.
  */
 
-int void _puts(char *str);
+	void _puts(char *str);
 {
 	int str;
 	int le;
