@@ -11,7 +11,7 @@ int move;
 	}
 	for (move = 0; src[move] != '\0'; move++)
 	{
-		dest[index]=src[move];
+		dest[index] = src[move];
 		index++;
 	}
 	return (dest);
