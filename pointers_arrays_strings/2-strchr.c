@@ -6,7 +6,7 @@
  * Return: display specific velue in the string
  */
 
-char_strchr(char s, char c)
+char *_strchr(char s, char c)
 {
          unsigned int i;
 
