@@ -6,11 +6,11 @@
  * Return: display specific velue in the string
  */
 
-char *_strchr(char s, char c)
+char *_strchr(char *s, char c)
 {
-         unsigned int i;
+        unsigned int i;
 
-        for (i = 0;s != '\0';)
+        for (i = 0;*s != '\0';)
         {
                 if (*s == c)
                 {
