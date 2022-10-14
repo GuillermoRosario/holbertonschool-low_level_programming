@@ -1,22 +1,32 @@
 #include "main.h"
 /**
- * string_toupper - print lower case to upper case
- * @s: given string
- * Return: all lower case to upper case
+ * cap_string - capitalizes word of the string
+ * @str: string to manipulate
+ * Return: return the value of str
  */
-char *string_toupper(char *s)
+char *cap_string(char *str)
 {
-	int i;
+	int x, j;
 
-	for (i = 0; s[i] != '\0';)
+	char comp[13] = {' ', '\t', '\n', ',', ';', '.',
+'!', '?', '"', '(', ')', '{', '}'};
+
+	for (x = 0 ; str[x] != '\0'; x++)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		if (x == 0 && str[x] >= 'a' && str[x] <= 'z')
 		{
-			s[i] = s[i] - 32;
+			str[x] -= 32;
 		}
-
-		i++;
+		for (j = 0; j < 13; j++)
+		{
+			if (str[x] == comp[j])
+			{
+				if (str[x + 1] >= 'a' && str[x + 1] <= 'z')
+				{
+					str[x + 1] -= 32;
+				}
+			}
+		}
 	}
-	return (s);
-
+		return (str);
 }
