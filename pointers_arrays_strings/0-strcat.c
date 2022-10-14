@@ -3,9 +3,9 @@
 char *_strcat(char *dest, char *src)
 {
 int index;
-int move; 
+int move;
 
-	for ( index = 0; dest[index] != '\0';) 
+	for (index = 0; dest[index] != '\0';) 
 	{
 		index++;
 	}
