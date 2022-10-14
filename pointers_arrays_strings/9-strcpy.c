@@ -4,23 +4,21 @@
  *
  */
 
-
-/*
- * Write a function that copies the string pointed to by src,
- * including the terminating null byte (\0), to the buffer pointed by dest. 
- *
- * Return the value: The pointer to dest
- */
-
 #include "main.h"
+/**
+ * _strcpy - copies the string pointed
+ * @dest: destination
+ * @src: source
+ * Return: destination
+ */
 char *_strcpy(char *dest, char *src)
 {
-	int G;
+	int k;
 
-	for (G = 0; src[G] != '\0'; G++)
+	for (k = 0; src[k] != '\0'; k++)
 	{
-		dest[G] = src[G];
+		dest[k] = src[k];
 	}
-	dest[G] = '\0';
+	dest[k] = '\0';
 	return (dest);
 }
