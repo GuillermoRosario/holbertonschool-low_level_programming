@@ -1,8 +1,3 @@
-/* File 0-strcat.c
- * Auth - Guillermo Rosario
- * Write a function that concatenates two strings
- */
-
 #include "main.h"
 
 char *_strcat(char *dest, char *src)
