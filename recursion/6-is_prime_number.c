@@ -1,36 +1,43 @@
-#include "main.h"
-/**
- * is_prime_number - returns if the input integer is a prime number
- * prime - funtion created
- * @n: number
- * @i: variable
- * Return: prime number
- */
-int prime(int i, int n);
+#include "holberton.h"
 
+int is_divisible(int num, int div);
+int is_prime_number(int n);
+
+/**
+ * is_divisible - Checks if a number is divisible.
+ * @num: The number to be checked.
+ * @div: The divisor.
+ *
+ * Return: If the number is divisible - 0.
+ *         If the number is not divisible - 1.
+ */
+int is_divisible(int num, int div)
+{
+	if (num % div == 0)
+		return (0);
+
+	if (div == num / 2)
+		return (1);
+
+	return (is_divisible(num, div + 1));
+}
+
+/**
+ * is_prime_number - Checks if a number is prime.
+ * @n: The number to be checked.
+ *
+ * Return: If the integer is not prime - 0.
+ *         If the number is prime - 1.
+ */
 int is_prime_number(int n)
 {
-	return (prime(2, n));
-}
-/**
- * prime - function created
- * Return: prime number
- * @i: variable
- * @n: variable
- */
+	int div = 2;
 
-int prime(int i, int n)
-{
 	if (n <= 1)
-	{
 		return (0);
-	}
-	else if (i % n == 0)
-	{
-			return (1);
-	}
-	else
-	{
-		return (prime(i, n - 1));
-	}
+
+	if (n >= 2 && n <= 3)
+		return (1);
+
+	return (is_divisible(n, div));
 }
