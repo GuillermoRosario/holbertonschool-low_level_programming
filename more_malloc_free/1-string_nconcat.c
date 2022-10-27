@@ -1,68 +1,26 @@
 #include "main.h"
+
 /**
- *_strlen - count arrray
- *@s: array of elements
- *Return: int i
+ *_calloc -allocated memoria for nmeb elemn de zise bytes
+ *@nmemb: number of element in the array
+ *@size: bytes for each position in the array
+ *Return: pointer void
  */
-int _strlen(char *s)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	char *p;
 	unsigned int i;
 
-	i = 0;
-	while (s[i] != '\0') /*Count character of string*/
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- *string_nconcat - concatenates two strings
- *@s1: string
- *@s2: string
- *@n: number bytes
- *Return: char dst
- */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
-{
-	char *dst;
-	unsigned int i, count, j, size, size_1, size_2;
-
-	if (s1 == NULL) /*If the array is empty*/
-		s1 = "";
-
-	if (s2 == NULL)
-		s2 = "";
-
-	size_1 = _strlen(s1);
-	size_2 = _strlen(s2);
-
-	if (n >= size_2)
-	{
-		count = size_2;
-	}
-	else
-	{
-		count = n;
-	}
-	/*count size total*/
-	size = size_1 + count + 1;
-	/*malloc*/
-	dst = (char *) malloc(size * sizeof(char));
-	if (dst == 0)
-	{
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	}
-	/*Concatenate arrays*/
-	{
-		for (i = 0; *(s1 + i) != '\0'; i++)
-			*(dst + i) = *(s1 + i);
-		for (j = 0; j < count; j++)
-		{
-			*(dst + i) = *(s2 + j);
-			i++;
-		}
-		*(dst + i) = '\0';
-	}
-	return (dst);
+
+	p = malloc(nmemb * size);
+	if (p == NULL)
+		return (NULL);
+
+	for (i = 0; i < nmemb * size; i++)
+		p[i] = 0;
+
+	return (p);
+
 }
