@@ -1,14 +1,16 @@
-#include <stdio.h>
-#include "dog.h"
-
-int main (void)
+#ifndef DOG_H
+#define DOG_H
+/**
+ * struct dog - new type
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
+struct dog
 {
-	struct my_dog;
-
-	char * my_dog.name = "Napoleon";
-	float my_dog.age = 3.5;
-	char * my_dog.owner = "Guillermo";
-	printf("My name is %s, and I am %1f :) - Woof!\n", my_dog.name, my_dog.age);
-	return (0);
-}
-
+char *name;
+float age;
+char *owner;
+};
+void init_dog(struct dog *d, char *name, float age, char *owner);
+#endif
