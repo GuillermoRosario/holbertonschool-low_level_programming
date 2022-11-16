@@ -4,9 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/* List of functions 
- * to be utilized*/
-
+/* List of functions to be utilized*/
 
 typedef struct list_s
 {
